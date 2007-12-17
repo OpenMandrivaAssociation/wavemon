@@ -52,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %{_bindir}/wavemon
-%{_mandir}/man1/wavemon.1.bz2
-%{_mandir}/man5/wavemonrc.5.bz2
+%{_mandir}/man1/wavemon.1*
+%{_mandir}/man5/wavemonrc.5*
 
 
