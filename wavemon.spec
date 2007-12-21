@@ -13,6 +13,7 @@ Patch3: wavemon-0.4.0b-gcc4.patch.bz2
 License: GPL
 Group: System/Kernel and hardware
 Url: http://www.janmorgenstern.de/projects-software.html
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires: ncurses-devel
 
