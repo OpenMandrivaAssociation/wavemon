@@ -18,7 +18,6 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: ncurses-devel
 
 %description
-
 Wavemon is a wireless device monitoring application that allows you to watch
 signal and noise levels, packet statistics, device configuration and network
 parameters of your wireless network hardware. It has currently only been
