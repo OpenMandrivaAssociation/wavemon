@@ -1,18 +1,15 @@
 %define name wavemon
-%define version 0.4.0b
-%define release %mkrel 4
+%define version 0.6.7
+%define release %mkrel 1
 
 Summary: Wireless network devices monitoring application
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{version}.tar.bz2
-Patch1: wavemon_0.4.0b_exit_arg.patch.bz2
-Patch2: wavemon_0.4.0b_make_gcc_happy.patch.bz2
-Patch3: wavemon-0.4.0b-gcc4.patch.bz2
-License: GPL
+Source0: http://eden-feed.erg.abdn.ac.uk/wavemon/stable-releases/%{name}-%{version}.tar.bz2
+License: GPLv2+
 Group: System/Kernel and hardware
-Url: http://www.janmorgenstern.de/projects-software.html
+Url: http://eden-feed.erg.abdn.ac.uk/wavemon/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires: ncurses-devel
@@ -30,28 +27,25 @@ kernel extensions by Jean Tourrilhes <jt@hpl.hp.com>.
 %prep
 %setup -q
 
-%patch1 -p1
-%patch2 -p1
-%patch3 -p0
-
 %build
-%configure
+%configure2_5x
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/%{_bindir}
-mkdir -p ${RPM_BUILD_ROOT}%{_mandir}/{man1,man5}
+rm -rf %{buildroot}
+mkdir -p %{buildroot}/%{_bindir}
+mkdir -p %{buildroot}%{_mandir}/{man1,man5}
 
 %makeinstall
+rm %{buildroot}%{_datadir}/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %{_bindir}/wavemon
 %{_mandir}/man1/wavemon.1*
 %{_mandir}/man5/wavemonrc.5*
-
+%doc NEWS AUTHORS README THANKS
 
