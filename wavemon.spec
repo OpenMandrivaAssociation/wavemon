@@ -1,5 +1,5 @@
 %define name wavemon
-%define version 0.6.7
+%define version 0.7.1
 %define release %mkrel 1
 
 Summary: Wireless network devices monitoring application
