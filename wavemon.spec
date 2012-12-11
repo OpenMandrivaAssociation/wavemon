@@ -49,3 +49,36 @@ rm -rf %{buildroot}
 %{_mandir}/man5/wavemonrc.5*
 %doc NEWS AUTHORS README THANKS
 
+
+
+%changelog
+* Wed Mar 16 2011 Stéphane Téletchéa <steletch@mandriva.org> 0.7.1-1mdv2011.0
++ Revision: 645486
+- update to new version 0.7.1
+
+* Mon Aug 17 2009 Frederik Himpe <fhimpe@mandriva.org> 0.6.7-1mdv2010.0
++ Revision: 417362
+- Update to new version 0.6.7
+- Remove old build patches, not needed anymore
+- SPEC file clean-ups
+
+* Tue Jul 22 2008 Thierry Vignaud <tv@mandriva.org> 0.4.0b-4mdv2009.0
++ Revision: 240162
+- rebuild
+- fix spacing at top of description
+- kill re-definition of %%buildroot on Pixel's request
+- do not hardcode man pages extension
+- import wavemon
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+
+* Wed Sep 28 2005 Nicolas L�cureuil <neoclust@mandriva.org> 0.4.0b-3mdk
+- Fix BuildRequires
+
+* Sun May 22 2005 Pascal Terjan <pterjan@mandriva.org> 0.4.0b-2mdk
+- gcc4 patch
+
+* Fri May  7 2004 Juan Quintela <quintela@mandrakesoft.com> 0.4.0b-1mdk
+- 1st mandrake package.
