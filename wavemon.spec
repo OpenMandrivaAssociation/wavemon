@@ -7,7 +7,11 @@ License: GPLv2+
 Group: System/Kernel and hardware
 Url: http://eden-feed.erg.abdn.ac.uk/wavemon/
 
-BuildRequires: ncurses-devel
+BuildRequires: pkgconfig(ncurses)
+BuildRequires:  pkgconfig(libnl-3.0)
+BuildRequires:  pkgconfig(libnl-genl-3.0)
+BuildRequires:  pkgconfig(libnl-1)
+BuildRequires:  pkgconfig(libcap)
 
 %description
 Wavemon is a wireless device monitoring application that allows you to watch
