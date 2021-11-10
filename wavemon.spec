@@ -25,6 +25,7 @@ kernel extensions by Jean Tourrilhes <jt@hpl.hp.com>.
 %setup -q
 
 %build
+export CFLAGS="%{optflags} `pkg-config --cflags libnl-3.0` -D_REENTRANT -pthread"
 %configure
 %make_build
 
