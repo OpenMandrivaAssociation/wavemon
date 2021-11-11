@@ -28,8 +28,8 @@ sed -r 's|\?=|=|g' -i Makefile.in
 %build
 
 export CFLAGS="%{optflags} `pkg-config --cflags libnl-3.0` -D_REENTRANT -pthread"
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %configure
 %make_build
 
@@ -41,8 +41,6 @@ export CXX=g++
 %{_bindir}/wavemon
 %{_mandir}/man1/wavemon.1*
 %{_mandir}/man5/wavemonrc.5*
-%doc NEWS AUTHORS README THANKS
-
 
 
 %changelog
