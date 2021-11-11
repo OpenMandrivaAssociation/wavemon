@@ -23,13 +23,10 @@ kernel extensions by Jean Tourrilhes <jt@hpl.hp.com>.
 
 %prep
 %setup -q
+sed -r 's|\?=|=|g' -i Makefile.in
 
 %build
-CFLAGS="$RPM_OPT_FLAGS -fPIC -pie -Wl,-z,relro -Wl,-z,now"
-CXXFLAGS="$RPM_OPT_FLAGS -fPIC -pie -Wl,-z,relro -Wl,-z,now"
- 
-export CFLAGS
-export CXXFLAGS
+
 export CFLAGS="%{optflags} `pkg-config --cflags libnl-3.0` -D_REENTRANT -pthread"
 export CC=gcc
 export CXX=g++
