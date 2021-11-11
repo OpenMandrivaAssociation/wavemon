@@ -41,7 +41,7 @@ export CFLAGS="%{optflags} `pkg-config --cflags libnl-3.0` -D_REENTRANT -pthread
 %{_bindir}/wavemon
 %{_mandir}/man1/wavemon.1*
 %{_mandir}/man5/wavemonrc.5*
-
+%doc LICENSE README.md
 
 %changelog
 * Wed Mar 16 2011 StÃ©phane TÃ©letchÃ©a <steletch@mandriva.org> 0.7.1-1mdv2011.0
