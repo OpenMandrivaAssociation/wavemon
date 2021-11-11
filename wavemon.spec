@@ -7,7 +7,7 @@ License: GPLv2+
 Group: System/Kernel and hardware
 Url: http://eden-feed.erg.abdn.ac.uk/wavemon/
 
-BuildRequires: pkgconfig(ncurses)
+BuildRequires:  pkgconfig(ncurses)
 BuildRequires:  pkgconfig(libnl-3.0)
 BuildRequires:  pkgconfig(libnl-genl-3.0)
 BuildRequires:  pkgconfig(libnl-1)
@@ -25,6 +25,11 @@ kernel extensions by Jean Tourrilhes <jt@hpl.hp.com>.
 %setup -q
 
 %build
+CFLAGS="$RPM_OPT_FLAGS -fPIC -pie -Wl,-z,relro -Wl,-z,now"
+CXXFLAGS="$RPM_OPT_FLAGS -fPIC -pie -Wl,-z,relro -Wl,-z,now"
+ 
+export CFLAGS
+export CXXFLAGS
 export CFLAGS="%{optflags} `pkg-config --cflags libnl-3.0` -D_REENTRANT -pthread"
 %configure
 %make_build
