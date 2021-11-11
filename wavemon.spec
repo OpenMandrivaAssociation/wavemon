@@ -28,20 +28,22 @@ sed -r 's|\?=|=|g' -i Makefile.in
 %build
 
 export CFLAGS="%{optflags} `pkg-config --cflags libnl-3.0` -D_REENTRANT -pthread"
-#export CC=gcc
-#export CXX=g++
 %configure
 %make_build
 
 %install
 %make_install
 
+# Delete wrong placed doc files
+rm -rf %{buildroot}%{_datadir}/%{name}/*
+
 %files
-%defattr(-,root,root)
+%doc README.md
+%license LICENSE
 %{_bindir}/wavemon
 %{_mandir}/man1/wavemon.1*
 %{_mandir}/man5/wavemonrc.5*
-%doc LICENSE README.md
+
 
 %changelog
 * Wed Mar 16 2011 StÃ©phane TÃ©letchÃ©a <steletch@mandriva.org> 0.7.1-1mdv2011.0
