@@ -1,11 +1,11 @@
 Summary: Wireless network devices monitoring application
 Name: wavemon
-Version: 0.9.5
+Version: 0.9.6
 Release: 1
 Source0: https://github.com/uoaerg/wavemon/archive/v%{version}/%{name}-%{version}.tar.gz
 License: GPLv2+
 Group: System/Kernel and hardware
-Url: http://eden-feed.erg.abdn.ac.uk/wavemon/
+Url: https://eden-feed.erg.abdn.ac.uk/wavemon/
 
 BuildRequires:  pkgconfig(ncurses)
 BuildRequires:  pkgconfig(libnl-3.0)
