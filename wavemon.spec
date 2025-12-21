@@ -7,6 +7,11 @@ License: GPLv2+
 Group: System/Kernel and hardware
 Url: https://eden-feed.erg.abdn.ac.uk/wavemon/
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig(ncurses)
 BuildRequires:  pkgconfig(libnl-3.0)
 BuildRequires:  pkgconfig(libnl-genl-3.0)
