@@ -1,6 +1,6 @@
 Summary: Wireless network devices monitoring application
 Name: wavemon
-Version: 0.9.6
+Version: 0.9.7
 Release: 1
 Source0: https://github.com/uoaerg/wavemon/archive/v%{version}/%{name}-%{version}.tar.gz
 License: GPLv2+
